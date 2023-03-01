@@ -1,0 +1,17 @@
+body {
+    background-color: lightgray;
+}
+
+#grid {
+    height: 512px;
+    width: 512px;
+    background-color: white;
+    display: flex;
+
+}
+
+div {
+    background-color: pink;
+    border: 1px solid black;
+    flex-grow: 1;
+}
