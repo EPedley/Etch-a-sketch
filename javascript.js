@@ -3,7 +3,7 @@
 function setGrid() {
     //document.getElementById("grid").innerHTML = "Hello World";
 
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < (16 * 16); i++) {
         document.getElementById("grid").innerHTML += "<div></div>"
     }
 

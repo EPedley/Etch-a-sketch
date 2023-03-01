@@ -7,11 +7,11 @@ body {
     width: 512px;
     background-color: white;
     display: flex;
-
+    flex-wrap: wrap;
 }
 
 div {
-    background-color: pink;
-    border: 1px solid black;
-    flex-grow: 1;
+    border: 0.25px solid rgb(255, 0, 0);
+    height: 31px;
+    width: 31px;
 }
