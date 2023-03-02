@@ -1,28 +1,36 @@
-//function to decide grid layout
+//function to resize all the divs to fit the grid
+function resizeBoxes(num) {
 
-function setGrid() {
-    //document.getElementById("grid").innerHTML = "Hello World";
+    const boxes = document.querySelectorAll("#box");
 
-    for (let i = 0; i < (16 * 16); i++) {
-        document.getElementById("grid").innerHTML += "<div></div>"
+    const height = (512 - num) / num;
+
+    const width = (512 - num) / num;
+
+    for (let i = 0; i < boxes.length; i++) {
+        boxes[i].style.height = height + "px";
+        boxes[i].style.width = width + "px";
     }
-
-    //const grid = document.querySelector("#grid");
-
-    //const div = document.createElement("div");
-    
-    //for (let i = 0; i < 16; i++) {
-    //    grid.appendChild(div);
-    //}
-    
-
-    //grid.innerHTML = <div></div>;
 }
 
+//function to create all the divs in the grid
+function setGrid(num) {
+    
+    //loop through the number inputted by the user and create x number of boxes
+    for (let i = 0; i < (num * num); i++) {
+        //create a new div element called box
+        const box = document.createElement("div");
+        //set the id of the div to box
+        box.setAttribute("id", "box");
+        //add the box to the grid
+        grid.appendChild(box);
+
+        resizeBoxes(num);   
+    }
+}
 
 //listen to grid button and begin grid layout function when clicked
 const gridButton = document.getElementById("grid-button");
-
 //remove 16 when done
 gridButton.addEventListener("click", setGrid(16));
 

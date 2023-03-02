@@ -8,10 +8,10 @@ body {
     background-color: white;
     display: flex;
     flex-wrap: wrap;
+    border: 0.25px solid rgb(239, 239, 239);
 }
 
-div {
-    border: 0.25px solid rgb(255, 0, 0);
-    height: 31px;
-    width: 31px;
+#box {
+    border: 0.25px solid rgb(239, 239, 239);
 }
+
