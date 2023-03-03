@@ -1,13 +1,19 @@
 body {
     background-color:  #feeefe;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    font-family: "DotGothic16";
+    letter-spacing: 1px;
+    margin: 0;
 }
 
 .button-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 90px;
 }
 
 li {
@@ -51,8 +57,9 @@ button:focus {
     box-shadow: 10px 10px #4F25E1;
 }
 
-#box {
-    border: 0.25px solid #FFFAFF;
+.box {
+    border: 0.25px solid #feeefe;
+    background-color: "black";
 }
 
 .container {
@@ -64,12 +71,19 @@ button:focus {
     font-family: "VT323";
     text-align: center;
     font-size: 80px;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding: 0px 80px 50px 80px;
     text-shadow: 4px 4px  #43E8FF;
 }
 
 .etch-a-sketch > .text {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.footer {
+    text-align: center;
+    background-color: #43E8FF;
+    color: white;
+    font-size: 12px;
+    padding: 5px 0px;
 }
