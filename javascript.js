@@ -68,6 +68,15 @@ function paint(paintSetting, paintColour) {
     }
 }
 
+//clear function
+function clear () {
+    const boxes = document.querySelectorAll(".box");
+
+    for (let i = 0; i < boxes.length; i++) {
+        boxes[i].style.backgroundColor = "white";
+    }
+}
+
 const grid = document.querySelector(".grid");
 const sizeToggle = document.querySelector(".size-toggle");
 
@@ -83,21 +92,19 @@ sizeToggle.addEventListener("click", function() {
 const rainbowModeClicked = document.querySelector(".rainbow-mode");
 rainbowModeClicked.addEventListener("click", function() {
     paintSetting = "rainbow";
-    console.log(paintColour);
 });
 
 const colourModeClicked = document.querySelector(".colour-mode");
 colourModeClicked.addEventListener("click", function() {
-    paintSetting = "colour"
+    paintSetting = "colour";
+    //update to the colour from the colour picker
     paintColour = "black";
-    console.log(paintColour);
 });
 
 const eraserModeClicked = document.querySelector(".eraser-mode");
 eraserModeClicked.addEventListener("click", function() {
     paintSetting = "eraser";
     paintColour = "white";
-    console.log(paintColour);
 });
 //end of colour choosing
 
@@ -105,4 +112,10 @@ eraserModeClicked.addEventListener("click", function() {
 //reset the grid if button is clicked
 grid.addEventListener("mousedown", function() {
     paint(paintSetting, paintColour);
+});
+
+//clear the grid if button is clicked
+const clearButton = document.querySelector(".clear-button");
+clearButton.addEventListener("click", function() {
+    clear();
 });
