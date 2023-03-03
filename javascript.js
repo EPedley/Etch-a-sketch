@@ -106,12 +106,3 @@ eraserModeClicked.addEventListener("click", function() {
 grid.addEventListener("mousedown", function() {
     paint(paintSetting, paintColour);
 });
-
-//grid.addEventListener("mouseup", function() {
-//    paint();
-//});
-
-
-// box.addEventListener("click", function() {
-//     console.log('hello');
-// });

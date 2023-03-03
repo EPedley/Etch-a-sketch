@@ -39,12 +39,21 @@ button {
     box-shadow: 3px 3px #F734CB;
 }
 
-button:focus {
+.colour-mode:focus, .rainbow-mode:focus, .eraser-mode:focus {
     background-color: #F734CB;
     cursor: pointer;
     color: white;
     transform: translateY(2px);
     transform: translateX(2px);
+}
+
+.clear-button:active {
+    background-color: #F734CB;
+    cursor: pointer;
+    color: white;
+    transform: translateY(2px);
+    transform: translateX(2px);
+    transition-duration: 1s;
 }
 
 #grid {
