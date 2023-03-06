@@ -1,4 +1,4 @@
-let DEFAULTCOLOUR = "black";
+let DEFAULTCOLOUR = "#43E8FF";
 let DEFAULTGRID = "16";
 let DEFAULTSETTING = "colour";
 
@@ -61,7 +61,6 @@ function paint(paintSetting, paintColour) {
                 let green = Math.floor((Math.random() * 255) + 1);
                 let blue = Math.floor((Math.random() * 255) + 1);
                 let randomColour = `rgb(${red},${green},${blue})`;
-                console.log(randomColour);
                 boxes[i].style.backgroundColor = randomColour;
             });
         }       
@@ -88,6 +87,10 @@ sizeToggle.addEventListener("click", function() {
     setGrid(32);
 });
 
+document.getElementById("colour-picker").addEventListener("change", (e) => {
+    paintColour = e.target.value;
+})
+
 //set the paint colour when a button is clicked
 const rainbowModeClicked = document.querySelector(".rainbow-mode");
 rainbowModeClicked.addEventListener("click", function() {
@@ -97,8 +100,6 @@ rainbowModeClicked.addEventListener("click", function() {
 const colourModeClicked = document.querySelector(".colour-mode");
 colourModeClicked.addEventListener("click", function() {
     paintSetting = "colour";
-    //update to the colour from the colour picker
-    paintColour = "black";
 });
 
 const eraserModeClicked = document.querySelector(".eraser-mode");
@@ -108,8 +109,7 @@ eraserModeClicked.addEventListener("click", function() {
 });
 //end of colour choosing
 
-
-//reset the grid if button is clicked
+//once the user clicks in the grid they should start painting
 grid.addEventListener("mousedown", function() {
     paint(paintSetting, paintColour);
 });
@@ -119,3 +119,9 @@ const clearButton = document.querySelector(".clear-button");
 clearButton.addEventListener("click", function() {
     clear();
 });
+
+
+//TODO
+//Make it so the buttons stay down
+
+//Make it so that the pen stops on mouse up
