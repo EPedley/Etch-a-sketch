@@ -1,5 +1,5 @@
 let DEFAULTCOLOUR = "#43E8FF";
-let DEFAULTGRID = "16";
+let DEFAULTGRID = "32";
 let DEFAULTSETTING = "colour";
 
 let num = DEFAULTGRID;
@@ -78,14 +78,17 @@ function clear () {
 
 const grid = document.querySelector(".grid");
 const sizeToggle = document.querySelector(".size-toggle");
+const sizeText = document.querySelector("#size-text");
 
 //create the default grid
 setGrid(num);
 
 //reset the grid if button is clicked
-sizeToggle.addEventListener("click", function() {
-    setGrid(32);
-});
+sizeToggle.addEventListener("change", (e) => {
+    num = e.target.value;
+    setGrid(num);
+    sizeText.innerHTML = `${num} x ${num}`;
+})
 
 document.getElementById("colour-picker").addEventListener("change", (e) => {
     paintColour = e.target.value;
