@@ -1,17 +1,20 @@
 # Etch-a-sketch
 
-As part of my progress through The Odin Project Foundations course I have created an Etch-a-sketch. You are able to 
-- Pick a colour and draw with it
-- Select a randomised colour that will change on each pixel
-- Use an eraser which will remove the contents of a pixel
-- Clear the board
-- Toggle dimensions of the grid
+As part of my progress through The Odin Project Foundations course I have created an Etch-a-sketch using HTML, CSS and Javascript. 
+
+The etch-a-sketch:
+- Selects the colour of the paint according to the user's selection. If the user selects rainbow, each pixel is painted a random colour
+- Has an eraser button which wipes the contents of the pixel of the user's choice
+- Has a clear button which wipes the board
+- Has a toggle which enables the user to change the dimensions of the grid at will
 
 Working through this project I have learnt to do the following:
+- Use arrays and built-in array methods
+- Use loops
+- How to target nodes with "selectors"
+- How to use a range of event listeners to make my interfaces responsive
 - Work with and format webkits
 - How to manipulate the DOM so that it is responsive to user input
-- How to use random numbers to generate random colours
-- Various different event listeners
 
 I would still like to improve this project. Three key areas I am keen to explore are: 
 - How do I make the code faster? At high numbers for dimensions, the grid takes a long time to load. I suspect this is because of all the looping it is doing, so I would like to revisit this code to make it faster.
